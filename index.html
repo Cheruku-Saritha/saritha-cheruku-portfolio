@@ -1,340 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saritha Cheruku | Data Analyst</title>
-
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<!-- Your CSS File -->
-<link rel="stylesheet" href="style.css">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#0f172a;
-    color:white;
-}
-
-/* NAVBAR */
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 80px;
-    position:fixed;
-    width:100%;
-    top:0;
-    background:#0f172a;
-    z-index:1000;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:30px;
-}
-
-nav a{
-    text-decoration:none;
-    color:white;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#60a5fa;
-}
-
-/* HERO */
-.hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:150px 80px 100px;
-}
-
-.hero-text{
-    max-width:600px;
-}
-
-.hero-text h1{
-    font-size:40px;
-}
-
-.gradient-text{
-    font-size:48px;
-    font-weight:bold;
-    background:linear-gradient(90deg,#60a5fa,#a855f7,#ec4899);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-.hero-text p{
-    margin:20px 0;
-    color:#cbd5e1;
-    line-height:1.6;
-}
-
-.buttons{
-    margin-top:20px;
-}
-
-.btn{
-    padding:12px 25px;
-    border-radius:6px;
-    text-decoration:none;
-    margin-right:15px;
-    transition:.3s;
-}
-
-.primary{
-    background:#2563eb;
-    color:white;
-}
-
-.primary:hover{
-    background:#1d4ed8;
-}
-
-.secondary{
-    border:1px solid #2563eb;
-    color:white;
-}
-
-.secondary:hover{
-    background:#2563eb;
-}
-
-.hero-image img{
-    width:280px;
-    height:280px;
-    border-radius:50%;
-    border:4px solid #60a5fa;
-    object-fit:cover;
-}
-
-/* SECTIONS */
-.section{
-    padding:100px 80px;
-}
-
-.section h2{
-    text-align:center;
-    margin-bottom:50px;
-    color:#60a5fa;
-}
-
-/* CARD */
-.card{
-    background:#1e293b;
-    padding:25px;
-    margin-bottom:25px;
-    border-radius:12px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-/* SKILLS */
-.skills-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:25px;
-}
-
-.skill-card{
-    background:#1e293b;
-    padding:30px;
-    text-align:center;
-    border-radius:12px;
-    transition:.3s;
-}
-
-.skill-card i{
-    font-size:40px;
-    margin-bottom:15px;
-    color:#60a5fa;
-}
-
-.skill-card:hover{
-    background:#334155;
-    transform:translateY(-8px);
-}
-
-/* CONTACT */
-.contact{
-    text-align:center;
-}
-
-.social-icons{
-    margin-top:20px;
-}
-
-.social-icons a{
-    color:white;
-    font-size:30px;
-    margin:0 15px;
-    transition:.3s;
-}
-
-.social-icons a:hover{
-    color:#60a5fa;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:20px;
-    color:#94a3b8;
-    font-size:14px;
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-    .hero{
-        flex-direction:column;
-        text-align:center;
-    }
-    .hero-image{
-        margin-top:40px;
-    }
-    nav{
-        padding:20px;
-    }
-    .section{
-        padding:80px 20px;
-    }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Data Analyst | Responsive Portfolio</title>
 </head>
 
 <body>
-
-<!-- NAVBAR -->
-<nav>
-    <div><strong>Saritha</strong></div>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="#">Saritha Cheruku</a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" />
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+      </ul>
+    </div>
+  </nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
-    <div class="hero-text">
-        <h1>Hi, I'm</h1>
-        <h2 class="gradient-text">Saritha Cheruku</h2>
-        <p>
-        Data Analyst with 2+ years of experience delivering data-driven insights and building interactive dashboards using SQL, Power BI, and Excel. Proven track record of improving reporting accuracy by 25% and reducing manual effort by 30% through process automation and structured data modeling.
+  <section class="section">
+    <div class="section__container">
+      <div class="content">
+        <p class="subtitle">HELLO</p>
+        <h1 class="title">
+          I'm <span>Saritha<br /></span> Data Analyst
+        </h1>
+        <p class="description">
+          Welcome to my Data Analyst portfolio! I'm Saritha, a detail-oriented and analytical data professional with a
+          passion for transforming raw data into meaningful insights.
+          With expertise in SQL, Excel, and Power BI, I have worked on diverse projects, from employee performance
+          tracking to editorial workflow optimization.
+          My experience includes data modeling, visualization, and trend analysis, helping businesses make data-driven
+          decisions efficiently.
         </p>
-        <div class="buttons">
-            <a href="#projects" class="btn primary">View My Work</a>
-            <a href="#contact" class="btn secondary">Contact Me</a>
+        <div class="action__btns">
+          <button class="hire__me">Hire Me</button>
+          <button class="portfolio">Portfolio</button>
         </div>
+      </div>
+      <div class="image">
+        <img src="Image/Prof.jpg" alt="Profile Picture">
+      </div>
     </div>
+  </section>
 
-    <div class="hero-image">
-        <img src="Prof.jpg" alt="Saritha Profile">
-    </div>
-</section>
+  <!-- About Section -->
+  <!-- About Section -->
+  <section id="about">
+    <div class="about__container">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm Saritha Cheruku, a passionate Data Analyst with hands-on experience in SQL, Power BI, and Excel.
+        I specialize in transforming data into actionable insights, helping businesses make data-driven decisions that
+        improve efficiency and performance.
+      </p>
 
-<!-- ABOUT -->
-<section class="section" id="about">
-    <h2>About Me</h2>
-    <div class="card">
-        Data Analyst with experience at pex CoVantage Private Limited and GoApptiv Private Limited.
-        Specialized in workflow optimization, dashboard development,
-        KPI tracking, data validation and automation.
-    </div>
-</section>
+      <h3>Experience</h3>
+      <ul class="experience-list">
+        <li>
+          <strong>Apex CoVantage</strong> – Data Analyst (Feb 2023 - Apr 2024) <br />
+          - I designed an interactive Power BI dashboard to analyze editorial workflow efficiency, tracking manuscript
+          processing times, error rates, and client satisfaction.<br />
+          - I also utilized SQL Server and Power Query to extract, transform, and clean data, ensuring its accuracy and
+          reliability.<br />
+          - My efforts led to a 30% reduction in manuscript processing time and a 25% improvement in error
+          identification accuracy, contributing significantly to enhanced editorial quality.
+        </li>
+        <li>
+          <strong>Kalyani Steel</strong> – Data Analyst Intern (July 2022 – Dec 2022) <br />
+          <em>Tools & Technologies: Power BI, Excel</em> <br />
+          - I developed a Power BI dashboard to analyze Export & Domestic sales, providing actionable insights for
+          decision-making.<br />
+          - I also designed financial visualizations to track Finance Revenue and Accounts, ensuring accurate and
+          meaningful analysis for stakeholders.<br />
+        </li>
+      </ul>
 
-<!-- EXPERIENCE -->
-<section class="section" id="experience">
-    <h2>Experience</h2>
-
-    <div class="card">
-        <h3>GoApptiv Private Limited – Data Processing Analyst (2025–Present)</h3>
-      <ul> <li> Partner with stakeholders to translate business requirements into structured reporting solutions. </li>
-            <li> Lead quarterly and annual quality audits to identify process gaps and performance trends.</li>
-            <li> Build and enhance interactive dashboards to monitor KPIs and operational metrics.</li>
-            <li> Perform advanced SQL-based data extraction and validation for reporting accuracy.</li>
-            <li> Convert raw, unstructured datasets into meaningful insights for leadership decision-making.</li>
- </ul>
-    </div>
-
-    <div class="card">
-        <h3>Apex CoVantage Private Limited – Data Analyst (2023–2024)</h3>
-       <ul> <li> Developed Power BI dashboards to track productivity, workflow efficiency, and quality metrics. </li>
-            <li> Automated recurring reports, reducing manual reporting effort by 30%.</li>
-            <li>Implemented data validation frameworks that improved reporting accuracy by 25%.</li>
-            <li> Analyzed large operational datasets using SQL and Excel to identify bottlenecks.</li>
-            <li> Collaborated cross-functionally to optimize reporting workflows and support data-driven planning.</li>
- </ul>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="section" id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-        <h3>Editorial Workflow Efficiency Analysis</h3>
-        <p><strong>Tools:</strong> SQL, Excel, Power BI</p>
+      <h3>Skills</h3>
+      <div class="skills">
+        <h4>Data Analytics Tools</h4>
         <ul>
-            <li>Analyzed manuscript lifecycle data to identify workflow bottlenecks and inefficiencies.</li>
-            <li>Built interactive KPI dashboards in Power BI to track turnaround time, task completion, and quality metrics.</li>
-            <li>Reduced manuscript processing time by 30% by identifying delay patterns and optimizing task allocation.</li>
-            <li>Improved reporting accuracy by 25% through structured data validation and error tracking mechanisms.</li>
+          <li>Power BI</li>
+          <li>Excel</li>
+          <li>Power Query</li>
         </ul>
+
+        <h4>Programming Languages</h4>
+        <ul>
+          <li>SQL</li>
+          <li>Python</li>
+        </ul>
+
+        <h4>Data Science Libraries</h4>
+        <ul>
+          <li>Pandas</li>
+          <li>NumPy</li>
+          <li>Seaborn</li>
+        </ul>
+
+        <h4>Version Control & Web Technologies</h4>
+        <ul>
+          <li>GitHub</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+
+      <h3>Relevant Coursework</h3>
+      <ul>
+        <li>* Data Integrity</li>
+        <li>* Requirement Gathering</li>
+        <li>* Data Visualization</li>
+      </ul>
+      <ul>
+        <li>* Data Manipulation</li>
+        <li>* Data Analysis</li>
+        <li>* Business Impact Analysis</li>
+      </ul>
+
     </div>
-</section>
+  </section>
 
-<!-- SKILLS -->
-<section class="section" id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-        <div class="skill-card"><i class="fas fa-database"></i><p>SQL</p></div>
-        <div class="skill-card"><i class="fas fa-chart-line"></i><p>Power BI</p></div>
-        <div class="skill-card"><i class="fas fa-file-excel"></i><p>Excel</p></div>
-        <div class="skill-card"><i class="fas fa-code"></i><p>Python</p></div>
-        <div class="skill-card"><i class="fas fa-table"></i><p>Power Query</p></div>
-        <div class="skill-card"><i class="fab fa-github"></i><p>GitHub</p></div>
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact__container">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out to me!</p>
+
+      <div class="contact__info">
+        <p><i class="ri-mail-line"></i> Email: <a
+            href="mailto:cherukusaritha513@gmail.com">cherukusaritha513@gmail.com</a></p>
+        <p><i class="ri-phone-line"></i> Phone: <a href="tel:+919441937849">+91 94419 37849</a></p>
+        <p><i class="ri-map-pin-line"></i> Location: Hyderabad, India</p>
+      </div>
+
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section class="section contact" id="contact">
-    <h2>Contact Me</h2>
-    <p>Let's connect! You can find me here:</p>
+  <!-- Link to JavaScript File -->
+  <script src="contact.js"></script>
 
-    <div class="social-icons">
-        <a href="https://github.com/Saritha Cheruku" target="_blank">
-            <i class="fab fa-github"></i>
+
+  <!-- Resume Section -->
+  <section id="resume">
+    <div class="resume__container">
+      <h2>My Resume</h2>
+      <p>Click below to view or download my resume.</p>
+
+      <div class="resume__buttons">
+        <a href="Saritha.pdf" target="_blank">
+          <button class="view__resume">View Resume</button>
         </a>
-
-        <a href="https://www.linkedin.com/in/https://www.linkedin.com/in/saritha-cheruku-7a8979227" target="_blank">
-            <i class="fab fa-linkedin"></i>
+        <a href="Saritha.pdf" download="Saritha_Cheruku_profile.pdf">
+          <button class="download__resume">Download Resume</button>
         </a>
+      </div>
     </div>
-</section>
-
-<footer>
-    © 2026 Saritha Cheruku. All rights reserved.
-</footer>
-
+  </section>
 </body>
+
 </html>
