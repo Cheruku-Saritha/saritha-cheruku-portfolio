@@ -8,9 +8,6 @@
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- Your CSS File -->
-<link rel="stylesheet" href="style.css">
-
 <style>
 *{
     margin:0;
@@ -36,6 +33,7 @@ nav{
     top:0;
     background:#0f172a;
     z-index:1000;
+    border-bottom:1px solid #1e293b;
 }
 
 nav ul{
@@ -81,7 +79,7 @@ nav a:hover{
 .hero-text p{
     margin:20px 0;
     color:#cbd5e1;
-    line-height:1.6;
+    line-height:1.8;
 }
 
 .buttons{
@@ -94,6 +92,7 @@ nav a:hover{
     text-decoration:none;
     margin-right:15px;
     transition:.3s;
+    display:inline-block;
 }
 
 .primary{
@@ -130,6 +129,7 @@ nav a:hover{
 .section h2{
     text-align:center;
     margin-bottom:50px;
+    font-size:32px;
     color:#60a5fa;
 }
 
@@ -140,10 +140,70 @@ nav a:hover{
     margin-bottom:25px;
     border-radius:12px;
     transition:.3s;
+    border:1px solid #334155;
 }
 
 .card:hover{
     transform:translateY(-5px);
+    border-color:#2563eb44;
+}
+
+.card h3{
+    font-size:18px;
+    margin-bottom:10px;
+    color:white;
+}
+
+.card ul{
+    padding-left:18px;
+    color:#cbd5e1;
+    line-height:2;
+}
+
+/* PROJECT TAGS */
+.project-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:12px 0;
+}
+
+.tag{
+    background:#2563eb22;
+    border:1px solid #2563eb;
+    color:#60a5fa;
+    padding:4px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:500;
+}
+
+/* KPI BOXES */
+.kpi-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:12px;
+    margin:15px 0;
+}
+
+.kpi-box{
+    background:#0f172a;
+    border:1px solid #2563eb44;
+    border-radius:8px;
+    padding:14px;
+    text-align:center;
+}
+
+.kpi-box .kpi-value{
+    font-size:22px;
+    font-weight:bold;
+    color:#60a5fa;
+}
+
+.kpi-box .kpi-label{
+    font-size:11px;
+    color:#94a3b8;
+    margin-top:5px;
 }
 
 /* SKILLS */
@@ -159,6 +219,7 @@ nav a:hover{
     text-align:center;
     border-radius:12px;
     transition:.3s;
+    border:1px solid #334155;
 }
 
 .skill-card i{
@@ -167,9 +228,15 @@ nav a:hover{
     color:#60a5fa;
 }
 
+.skill-card p{
+    color:#cbd5e1;
+    font-weight:500;
+}
+
 .skill-card:hover{
     background:#334155;
     transform:translateY(-8px);
+    border-color:#2563eb44;
 }
 
 /* CONTACT */
@@ -177,13 +244,18 @@ nav a:hover{
     text-align:center;
 }
 
+.contact p{
+    color:#cbd5e1;
+    font-size:16px;
+}
+
 .social-icons{
-    margin-top:20px;
+    margin-top:30px;
 }
 
 .social-icons a{
     color:white;
-    font-size:30px;
+    font-size:35px;
     margin:0 15px;
     transition:.3s;
 }
@@ -192,12 +264,41 @@ nav a:hover{
     color:#60a5fa;
 }
 
+/* EMAIL LINK */
+.email-link{
+    display:inline-block;
+    margin-top:20px;
+    color:#60a5fa;
+    font-size:16px;
+    text-decoration:none;
+}
+
+.email-link:hover{
+    text-decoration:underline;
+}
+
 /* FOOTER */
 footer{
     text-align:center;
-    padding:20px;
+    padding:25px;
     color:#94a3b8;
     font-size:14px;
+    border-top:1px solid #1e293b;
+}
+
+/* ABOUT TEXT */
+.about-text{
+    color:#cbd5e1;
+    line-height:1.9;
+    font-size:15px;
+}
+
+/* EXPERIENCE ROLE */
+.role-title{
+    color:#60a5fa;
+    font-size:13px;
+    margin-bottom:12px;
+    font-weight:600;
 }
 
 /* RESPONSIVE */
@@ -205,15 +306,22 @@ footer{
     .hero{
         flex-direction:column;
         text-align:center;
+        padding:120px 20px 80px;
     }
     .hero-image{
         margin-top:40px;
     }
     nav{
-        padding:20px;
+        padding:15px 20px;
+    }
+    nav ul{
+        gap:15px;
     }
     .section{
         padding:80px 20px;
+    }
+    .kpi-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 }
 </style>
@@ -223,7 +331,7 @@ footer{
 
 <!-- NAVBAR -->
 <nav>
-    <div><strong>Saritha</strong></div>
+    <div><strong style="font-size:18px; color:#60a5fa;">Saritha</strong></div>
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -240,7 +348,10 @@ footer{
         <h1>Hi, I'm</h1>
         <h2 class="gradient-text">Saritha Cheruku</h2>
         <p>
-        Data Analyst with 2+ years of experience delivering data-driven insights and building interactive dashboards using SQL, Power BI, and Excel. Proven track record of improving reporting accuracy by 25% and reducing manual effort by 30% through process automation and structured data modeling.
+            Data Analyst with 2+ years of experience delivering data-driven insights
+            and building interactive dashboards using SQL, Power BI, and Looker Studio.
+            Proven track record of improving reporting accuracy by 25% and reducing
+            manual effort by 30% through process automation and structured data modeling.
         </p>
         <div class="buttons">
             <a href="#projects" class="btn primary">View My Work</a>
@@ -256,13 +367,21 @@ footer{
 <!-- ABOUT -->
 <section class="section" id="about">
     <h2>About Me</h2>
-    <<div class="card">
-I am a results-driven Data Analyst with 2+ years of experience across Apex CoVantage and GoApptiv Private Limited, specializing in transforming complex datasets into actionable business insights.
-
-My expertise includes SQL, Excel, Power BI, Looker Studio, MIS reporting, KPI tracking, and workflow optimization. I have successfully built dashboards, automated reporting systems, and performance analytics solutions that improved operational efficiency, reporting accuracy, and strategic decision-making.
-
-I am passionate about solving business problems through data storytelling, process improvement, and impactful analytics solutions.
-</div>
+    <div class="card">
+        <p class="about-text">
+            I am a results-driven Data Analyst with 2+ years of experience across Apex CoVantage
+            and GoApptiv Private Limited, specializing in transforming complex datasets into
+            actionable business insights.
+            <br><br>
+            My expertise includes SQL, Excel, Power BI, Looker Studio, MIS reporting, KPI tracking,
+            and workflow optimization. I have successfully built dashboards, automated reporting systems,
+            and performance analytics solutions that improved operational efficiency, reporting accuracy,
+            and strategic decision-making.
+            <br><br>
+            I am passionate about solving business problems through data storytelling, process improvement,
+            and impactful analytics solutions.
+        </p>
+    </div>
 </section>
 
 <!-- EXPERIENCE -->
@@ -270,62 +389,94 @@ I am passionate about solving business problems through data storytelling, proce
     <h2>Experience</h2>
 
     <div class="card">
-    <h3>GoApptiv Private Limited – Data Processing Analyst (Feb 2025 – Present)</h3>
-    <ul>
-        <li>Collaborate with stakeholders to understand business needs and translate them into structured reporting solutions.</li>
-        <li>Design and develop interactive dashboards to track KPIs and operational performance.</li>
-        <li>Perform SQL-based data extraction, transformation, and validation to ensure data accuracy.</li>
-        <li>Conduct periodic quality audits to identify process gaps and improve data reliability.</li>
-        <li>Transform raw datasets into actionable insights to support strategic decision-making.</li>
-    </ul>
-</div>
+        <h3>GoApptiv Private Limited</h3>
+        <p class="role-title">Data Processing Analyst &nbsp;|&nbsp; Feb 2025 – Present &nbsp;|&nbsp; Hyderabad, India</p>
+        <ul>
+            <li>Collaborate with stakeholders to understand business needs and translate them into structured reporting solutions.</li>
+            <li>Design and develop interactive Looker Studio dashboards to track KPIs and operational performance, improving reporting visibility by 25%.</li>
+            <li>Perform SQL-based data extraction, transformation, and validation to ensure data accuracy by 20%.</li>
+            <li>Conduct periodic quality audits to identify process gaps and improve data reliability.</li>
+            <li>Transform raw datasets into actionable insights to support strategic decision-making.</li>
+        </ul>
+    </div>
 
     <div class="card">
-    <h3>Apex CoVantage Private Limited – Data Analyst (Feb 2023 – Apr 2024)</h3>
-    <ul>
-        <li>Developed interactive Power BI dashboards to monitor productivity, workflow efficiency, and quality metrics.</li>
-        <li>Streamlined reporting processes by automating recurring reports, reducing manual effort significantly.</li>
-        <li>Implemented data validation techniques to improve reporting accuracy and consistency.</li>
-        <li>Analyzed operational data using SQL and Excel to identify bottlenecks and optimize workflows.</li>
-        <li>Collaborated with cross-functional teams to improve reporting processes and support data-driven decisions.</li>
-    </ul>
-</div>
+        <h3>Apex CoVantage Private Limited</h3>
+        <p class="role-title">Data Analyst &nbsp;|&nbsp; Feb 2023 – Apr 2024 &nbsp;|&nbsp; Hyderabad, India</p>
+        <ul>
+            <li>Developed interactive Power BI dashboards to monitor productivity, workflow efficiency, and quality metrics, increasing tracking efficiency by 20-30%.</li>
+            <li>Streamlined reporting processes by automating recurring reports, reducing manual effort by 35%.</li>
+            <li>Implemented data validation techniques to improve reporting accuracy by 20-25%.</li>
+            <li>Analyzed operational data using SQL and Excel to identify bottlenecks, contributing to a 30% reduction in processing time.</li>
+            <li>Collaborated with cross-functional teams to improve reporting processes and support data-driven decisions.</li>
+        </ul>
+    </div>
 </section>
 
-<!-- PROJECTS -->
 <!-- PROJECTS -->
 <section class="section" id="projects">
     <h2>Projects</h2>
 
+    <!-- Project 1: Field Force Performance Tracker -->
     <div class="card">
-        <h3>Data Quality & Performance Analytics System</h3>
-        <p><strong>Business Goal:</strong> Improve employee performance monitoring, audit accuracy, and process efficiency through structured KPI analysis.</p>
-        <p><strong>Tools Used:</strong> Excel, SQL</p>
-        <ul>
-            <li>Analyzed employee productivity, audit performance, and quality metrics to identify operational trends.</li>
-            <li>Performed data cleaning, validation, and KPI tracking to improve reporting consistency and decision-making.</li>
-            <li>Conducted root cause analysis on recurring quality issues, helping reduce process inefficiencies.</li>
-            <li>Delivered actionable insights that improved performance visibility and supported continuous process improvement.</li>
+        <h3>🏥 Field Force Performance Tracker</h3>
+        <p style="color:#94a3b8; margin:8px 0; line-height:1.6;">
+            <strong style="color:#cbd5e1;">Business Goal:</strong>
+            Track and optimize field agent performance across rural India to support GoApptiv's
+            healthcare mission of reaching 200,000+ villages across 27 states.
+        </p>
+
+        <div class="project-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+        </div>
+
+        <div class="kpi-grid">
+            <div class="kpi-box">
+                <div class="kpi-value">1,676</div>
+                <div class="kpi-label">Total Village Visits</div>
+            </div>
+            <div class="kpi-box">
+                <div class="kpi-value">2,250</div>
+                <div class="kpi-label">Target Visits</div>
+            </div>
+            <div class="kpi-box">
+                <div class="kpi-value">1,095</div>
+                <div class="kpi-label">Total Conversions</div>
+            </div>
+            <div class="kpi-box">
+                <div class="kpi-value">65.33%</div>
+                <div class="kpi-label">Conversion Rate</div>
+            </div>
+        </div>
+
+        <ul style="margin-top:12px;">
+            <li>Developed an interactive Power BI dashboard tracking 15 field agents across 10 states and 100+ districts in rural India.</li>
+            <li>Connected MySQL database to Power BI and wrote SQL queries to clean and transform raw field visit data for accurate reporting.</li>
+            <li>Created DAX measures to calculate Visit Completion Rate, Conversion Rate, and Target Achievement %.</li>
+            <li>Identified top performers (Meena Kumari 98%, Kavitha Menon 94%) and bottom performers for targeted intervention strategies.</li>
+            <li>Built interactive slicers for Month, State, and Product Category enabling dynamic filtering and real-time analysis.</li>
+            <li>Monthly trend analysis showed consistent performance improvement from January to March across all regions.</li>
         </ul>
     </div>
 
+    <!-- Project 2: Editorial Workflow -->
     <div class="card">
-        <h3>Invoice Processing & Approval Analytics Dashboard</h3>
-        <p><strong>Business Goal:</strong> Streamline invoice lifecycle tracking and improve approval efficiency through automated dashboard reporting.</p>
-        <p><strong>Tools Used:</strong> Looker Studio, Excel, SQL</p>
-        <ul>
-            <li>Designed and developed a Looker Studio dashboard to monitor invoice stages including approved, rejected, pending, and completed statuses.</li>
-            <li>Integrated Excel and SQL data sources to automate KPI reporting and provide real-time workflow visibility.</li>
-            <li>Analyzed approval rates and rejection trends to uncover bottlenecks and optimize invoice turnaround time.</li>
-            <li>Enhanced reporting efficiency and improved stakeholder decision-making with centralized dashboards.</li>
-        </ul>
-    </div>
+        <h3>📝 Editorial Workflow Efficiency & Quality Analysis</h3>
+        <p style="color:#94a3b8; margin:8px 0; line-height:1.6;">
+            <strong style="color:#cbd5e1;">Business Goal:</strong>
+            Optimize manuscript processing workflows and reduce turnaround delays in editorial operations.
+        </p>
 
-    <div class="card">
-        <h3>Editorial Workflow Efficiency & Quality Analysis</h3>
-        <p><strong>Business Goal:</strong> Optimize manuscript processing workflows and reduce turnaround delays in editorial operations.</p>
-        <p><strong>Tools Used:</strong> SQL, Excel, Power BI</p>
-        <ul>
+        <div class="project-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Power BI</span>
+        </div>
+
+        <ul style="margin-top:12px;">
             <li>Built structured SQL datasets to track manuscript lifecycle stages, task progress, and quality checkpoints.</li>
             <li>Developed interactive Power BI dashboards to monitor KPIs such as turnaround time, task completion, and error frequency.</li>
             <li>Identified workflow bottlenecks and delay patterns, reducing processing time by 30%.</li>
@@ -333,11 +484,21 @@ I am passionate about solving business problems through data storytelling, proce
         </ul>
     </div>
 
+    <!-- Project 3: MIS -->
     <div class="card">
-        <h3>MIS Productivity & Performance Analysis (PHRS & EHRs)</h3>
-        <p><strong>Business Goal:</strong> Strengthen workforce productivity tracking and improve operational efficiency through MIS performance analysis.</p>
-        <p><strong>Tools Used:</strong> Excel, SQL, MIS Reporting</p>
-        <ul>
+        <h3>📈 MIS Productivity & Performance Analysis (PHRS & EHRs)</h3>
+        <p style="color:#94a3b8; margin:8px 0; line-height:1.6;">
+            <strong style="color:#cbd5e1;">Business Goal:</strong>
+            Strengthen workforce productivity tracking and improve operational efficiency through MIS performance analysis.
+        </p>
+
+        <div class="project-tags">
+            <span class="tag">Excel</span>
+            <span class="tag">SQL</span>
+            <span class="tag">MIS Reporting</span>
+        </div>
+
+        <ul style="margin-top:12px;">
             <li>Designed and implemented an MIS productivity tracking system using PHRS (Productive Hours) and EHRs (Error Hours).</li>
             <li>Built Excel dashboards to compare target vs achieved productivity, monitor efficiency gaps, and track quality losses.</li>
             <li>Analyzed underperformance trends to identify productivity bottlenecks and optimize resource allocation.</li>
@@ -351,28 +512,31 @@ I am passionate about solving business problems through data storytelling, proce
 <section class="section" id="skills">
     <h2>Skills</h2>
     <div class="skills-grid">
-    <div class="skill-card"><i class="fas fa-database"></i><p>SQL</p></div>
-    <div class="skill-card"><i class="fas fa-file-excel"></i><p>Excel</p></div>
-    <div class="skill-card"><i class="fas fa-chart-line"></i><p>Power BI</p></div>
-    <div class="skill-card"><i class="fas fa-chart-bar"></i><p>Looker Studio</p></div>
-    <div class="skill-card"><i class="fas fa-table"></i><p>Data Visualization</p></div>
-    <div class="skill-card"><i class="fas fa-tachometer-alt"></i><p>Dashboard Development</p></div>
-    <div class="skill-card"><i class="fas fa-broom"></i><p>Data Cleaning</p></div>
-    <div class="skill-card"><i class="fas fa-bullseye"></i><p>KPI Tracking</p></div>
-</div>
+        <div class="skill-card"><i class="fas fa-database"></i><p>SQL</p></div>
+        <div class="skill-card"><i class="fas fa-file-excel"></i><p>Excel</p></div>
+        <div class="skill-card"><i class="fas fa-chart-line"></i><p>Power BI</p></div>
+        <div class="skill-card"><i class="fas fa-chart-bar"></i><p>Looker Studio</p></div>
+        <div class="skill-card"><i class="fas fa-table"></i><p>Data Visualization</p></div>
+        <div class="skill-card"><i class="fas fa-tachometer-alt"></i><p>Dashboard Development</p></div>
+        <div class="skill-card"><i class="fas fa-broom"></i><p>Data Cleaning</p></div>
+        <div class="skill-card"><i class="fas fa-bullseye"></i><p>KPI Tracking</p></div>
+    </div>
 </section>
 
 <!-- CONTACT -->
 <section class="section contact" id="contact">
     <h2>Contact Me</h2>
-    <p>Let's connect! You can find me here:</p>
+    <p>Let's connect! Feel free to reach out.</p>
+    <br>
+    <a href="mailto:cherukusaritha513@gmail.com" class="email-link">
+        <i class="fas fa-envelope"></i> cherukusaritha513@gmail.com
+    </a>
 
     <div class="social-icons">
-        <a href="https://github.com/Saritha Cheruku" target="_blank">
+        <a href="https://github.com/Saritha-Cheruku" target="_blank" title="GitHub">
             <i class="fab fa-github"></i>
         </a>
-
-        <a href="https://www.linkedin.com/in/https://www.linkedin.com/in/saritha-cheruku-7a8979227" target="_blank">
+        <a href="https://www.linkedin.com/in/saritha-cheruku-7a8979227" target="_blank" title="LinkedIn">
             <i class="fab fa-linkedin"></i>
         </a>
     </div>
